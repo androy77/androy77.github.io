@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="top-nav">
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+
+      <ul class="menu">
+        <li><a href="#about-us">Про нас</a></li>
+        <li><a href="#breed">Сорти ягід</a></li>
+        <li><a href="#delivery">Доставка і оплата</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </header>
+
+    <section class="hero">
+      <h2 class="hero-title">Полуниця для тебе</h2>
+    </section>
+
+    <section id="about-us" class="about-us">
+      <h2 class="title">Про нас</h2>
+
+      <p class="description">
+        Наші ягоди вирощуються з дотриманням усіх правил та технологій, і
+        відповідають нормам ДСТУ. <br />
+        Є багато сортів, кожен з яких дозріває в різний час.
+      </p>
+
+      <div class="item-wrapper">
+        <div class="item">
+          <h4 class="item-count">3</h4>
+          <p class="item-description">Поля в сумі займають ~3га землі</p>
+        </div>
+        <div class="item">
+          <h4 class="item-count">9</h4>
+          <p class="item-description">Стільки років ми вирощуємо полуницю</p>
+        </div>
+        <div class="item">
+          <h4 class="item-count">5+</h4>
+          <p class="item-description">
+            Акція “Прийди і збери” функціонує вже більше пʼяти років
+          </p>
+        </div>
+      </div>
+    </section>
+
+   
+    <section id="breed" class="breed">
+      <h2 class="title">Сорти ягід</h2>
+      <div class="item-wrapper">
+        <div class="item">
+          <img
+            class="image"
+            src="assets/florence.jpg"
+            alt="florence"
+            class="img"
+          />
+          <h4 class="item-title">Флоренція</h4>
+          <p class="item-description">
+            Дуже популярний сорт ягід, що гарно підходить для заморозки, смузі
+            чи інших застосувань за рахунок легкого зберігання.
+          </p>
+          <h5 class="price">50 грн / кг</h5>
+        </div>
+        <div class="item">
+          <img class="image" src="assets/prince.jpg" alt="prince" class="img" />
+          <h4 class="item-title">Темний принц</h4>
+          <p class="item-description">
+            Ексклюзивний сорт, широкорозповсюджений для сервірування тортів чи
+            інших десертів.
+          </p>
+          <h5 class="price">50 грн / кг</h5>
+        </div>
+        <div class="item">
+          <img
+            class="image"
+            src="assets/malvina.jpg"
+            alt="malvina"
+            class="img"
+          />
+          <h4 class="item-title">Мальвіна</h4>
+          <p class="item-description">
+            Ягоди великі та солодкі, їх дуже полюбляють діти. А все тому, що це
+            найкращий сорт для поїдання їх просто з цукром або й без нього.
+          </p>
+          <h5 class="price">50 грн / кг</h5>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery" class="delivery">
+      <h2 class="title">Доставка і оплата</h2>
+      <div class="item-wrapper">
+        <div class="item">
+          <div class="icon-wrapper">
+            <img src="assets/field.png" alt="Field" class="icon" />
+          </div>
+          <h4 class="item-title">Самовивіз з поля</h4>
+          <p class="item-description">
+            Самовивіз з поля доступний з 10:00 до 12:00. Місцезнаходження можна
+            взнати в розділі "Контакти"
+          </p>
+        </div>
+        <div class="item">
+          <div class="icon-wrapper">
+            <img src="assets/warehouse.png" alt="Warehouse" class="icon" />
+          </div>
+          <h4 class="item-title">Самовивіз зі складу</h4>
+          <p class="item-description">
+            Самовивіз зі складу доступний з 13:00 до 18:00. Район нової школи.
+          </p>
+        </div>
+        <div class="item">
+          <div class="icon-wrapper">
+            <img src="assets/car.png" alt="Car" class="icon" />
+          </div>
+          <h4 class="item-title">Доставка “До брами”</h4>
+          <p class="item-description">
+            У нас ви можете замовити безкоштовну доставку в межах
+            Зимноводівської ОТГ. Доступно при замовленні від 25кг і передоплати
+            по перерахунку.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+      <h2 class="title">Адреса та Контакти</h2>
+      <p class="phones">
+        Номери телефонів<br />+38 067 102 60 40<br />+38 067 830 80 70<br />+38
+        067 312 03 01
+      </p>
+      <p class="location">
+        <a
+          href="https://www.google.com/maps?q=49.829611,23.829611"
+          target="_blank"
+          class="location-link"
+        >
+          Місцезнаходження<br />с. Суховоля, вул. Липова 13<br />
+        </a>
+      </p>
+      <form class="form">
+        <h2>Задовольнити свій шлунок</h2>
+        <p type="Імʼя:"><input placeholder="Вкажіть ваше імʼя"></input></p>
+        <p type="Номер телефону:"><input placeholder="Вкажіть ваш номер телефону"></input></p>
+        <p type="Сорт:"><input placeholder="Вкажіть сорт, який бажаєте придбати"></input></p>
+        <p type="Кількість кілограмів:"><input placeholder="Вкажіть кількість кілограмів"></input></p>
+        <button>Замовити</button>
+      </form>
+    </section>
+  <a href="#" class="back_to_top"></a>
+  </body>
+</html>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+  $(".smooth-goto").on("click", function () {
+    $("html, body").animate(
+      { scrollTop: $(this.hash).offset().top - 50 },
+      1000
+    );
+    return false;
+  });
+</script>

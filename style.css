@@ -1,0 +1,375 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+  text-size-adjust: 69px;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: system-ui;
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+.back_to_top{
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  width: 50px;
+  height:50px;
+  /* border: 1px solid red;  */
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: rgb(131, 14, 14);
+}
+.back_to_top:hover,
+.back_to_top:focus
+{
+    filter: brightness(1.5);
+    outline: none;
+}
+.back_to_top::before,
+.back_to_top::after
+{
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); 
+}
+
+.back_to_top::before
+{
+  width: 5px;
+  height: 25px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #f5f0f6;
+}
+
+.back_to_top::after
+{
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: 5px solid #f5f0f6;
+  border-left: 5px solid #f5f0f6;
+}
+.top-nav {
+  display: flex;
+  /* background-color: #00BAF0;
+  background: linear-gradient(to left, #f46b45, #eea849); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  height: 70px;
+  padding: 5px 15px;
+  background-color: #090909eb;
+  width: 100%;
+  /* position: fixed; */
+  top: 0;
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+  font-size: 30px;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 800px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 70px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    background-color: #090909eb;
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: rgb(34, 34, 34);
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+.hero {
+  height: 70vh;
+  background-image: url("assets/strawberries.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  top: -70px;
+}
+
+.hero-title {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.delivery,
+.breed,
+.contacts {
+  margin-top: 70px;
+}
+.about-us {
+}
+
+.title {
+  font-size: 40px;
+}
+
+.description {
+  font-size: 20px;
+  text-align: center;
+  padding: 0 20px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.item-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 25%));
+  place-content: space-around;
+}
+
+.item {
+  text-align: center;
+  border-radius:20px;
+}
+
+.item-title {
+  font-size: 20px;
+  margin: 20px 0 40px;
+}
+
+.delivery .item {
+  border: 2px solid black;
+  padding: 40px 25px;
+}
+
+.breed .item {
+  background-color: #8080801c;
+  padding: 40px 25px;
+  display: grid;
+  place-content: space-between;
+  place-items: center;
+}
+
+.item-count {
+  font-size: 40px;
+  margin: 0;
+  border-bottom: 3px solid rgb(230 149 142);
+  padding-bottom: 10px;
+}
+.item-description {
+  font-size: 18px;
+}
+
+.icon-wrapper {
+  height: 70px;
+}
+
+.icon {
+  max-height: 100%;
+}
+
+@media (max-width: 1000px) {
+  .menu > li {
+    font-size: 24px;
+  }
+  .hero-title {
+    font-size: 55px;
+  }
+
+  .item-wrapper {
+    grid-template-columns: 80vw;
+    row-gap: 50px;
+  }
+}
+
+#breed,
+#contacts {
+  /* margin-top: 1000px; */
+}
+
+.location,
+.phones {
+  text-align: center;
+}
+.location-link {
+  color: black;
+  text-decoration: underline;
+}
+
+.contacts {
+  padding-bottom: 130px;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.image {
+  max-width: 70%;
+  border-radius: 50%;
+}
+
+.form{
+  width:340px;
+  height:500px;
+  background:#e6e6e6;
+  border-radius:20px;
+  box-shadow:0 0 40px -10px #000;
+  margin:calc(50vh - 450px) auto;
+  padding:20px 30px;
+  max-width:calc(100vw - 40px);
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+  position:relative
+}
+
+
+input{
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  background:none;
+  outline:none;
+  resize:none;
+  border:0;
+  font-family:'Montserrat',sans-serif;transition:all .3s;
+  border-bottom:2px solid #bebed2
+}
+
+input:focus{
+  border-bottom:2px solid #78788c
+}
+
+p:before{
+  content:attr(type);
+  display:block;
+  margin:28px 0 0;
+  font-size:14px;
+  color:#5a5a5a
+}
+
+button{
+  float:right;
+  padding:8px 12px;
+  margin:8px 0 0;
+  font-family:'Montserrat',sans-serif;
+  border:2px solid #78788c;
+  background:0;color:#5a5a6e;
+  cursor:pointer;
+  transition:all .3s
+}
+
+button:hover{
+  background:rgb(230 149 142);
+  color:#fff
+}
+
+span{margin:0 5px 0 15px}
